@@ -15,6 +15,28 @@
 
 <body>
 
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialogue-centered">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">You found a match!</h4>
+                </div>
+                <div class="modal-body">
+                <p id="modal-text"></p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
     <div class="container">
         <!-- Header -->
         <div class="row">
@@ -33,7 +55,6 @@
             <div class="col" style="border-bottom-style: solid; border-width: 1px; padding: 10px; border-color: grey">
                 <br>
                 <h3 style="font-weight: bold">About You</h3>
-
 
                 <form>
                     <!-- NAME/PHOTO -->
@@ -182,17 +203,20 @@
                         </select>
                     </div>
                     <br>
-
-                    <!-- SUBMIT -->
-                    <button type="button" class="btn btn-primary btn-lg submit" style="width: 100%">Submit</button>
     
                 </form>
 
+                <!-- SUBMIT -->
+                <button type="button" class="btn btn-primary btn-lg submit" style="width: 100%">Submit</button>
+                <br>
+                <a role="button" href="./" class="btn btn-danger btn-lg back" style="width: 100%">Go Back</a>
+
             </div>
+
+            
 
         </div>
 
-        
 
     </div>
 
@@ -204,20 +228,14 @@
     </footer>
 
 
-
-
-
     <script type="text/javascript">
 
-        // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-        // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-        // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-        // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-    
         $(".submit").on("click", function(event) {
-            event.preventDefault();
-          // Here we grab the form elements
-          var newFriend = {
+        event.preventDefault();
+        $("#myModal").modal();
+
+
+        var newFriend = {
             name: $("#name").val().trim(),
             photo: $("#photo").val().trim(),
             scores: [
@@ -234,18 +252,9 @@
             ]
           };
     
-
-    
-          // This line is the magic. It"s very similar to the standard ajax function we used.
-          // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-          // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-          // depending on if a tables is available or not.
     
           $.post("/api/friends", newFriend, function(data) {
-              console.log(data);
-              console.log(newFriend);
-    
-              // Clear the form when submitting
+
               $("#name").val("");
               $("#photo").val("");
               $("#q1").val("1");
@@ -259,10 +268,12 @@
               $("#q9").val("1");
               $("#q10").val("1");
             });
-    
+
         });
     
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>

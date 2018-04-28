@@ -12,6 +12,7 @@ module.exports = function(app) {
 
         compare(req.body);
 
+
         friends.push(req.body);
         
         res.json(true);
@@ -37,6 +38,12 @@ var compare = function(input) {
         return matchArray.indexOf(Math.min.apply(Math, matchArray))
     }
     var match = friends[findMatch(matchArray)]
-    console.log(match)
 
+    console.log(match.name)
+    console.log(match.photo)
+    document.getElementByID("modal-text").innterHTML("hello")
 }
+
+
+
+
