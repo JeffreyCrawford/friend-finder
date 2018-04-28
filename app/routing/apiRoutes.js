@@ -16,6 +16,8 @@ module.exports = function(app) {
         friends.push(req.body);
         
         res.json(true);
+
+        
     });
     
 
@@ -41,7 +43,6 @@ var compare = function(input) {
 
     console.log(match.name)
     console.log(match.photo)
-    document.getElementByID("modal-text").innterHTML("hello")
 }
 
 
