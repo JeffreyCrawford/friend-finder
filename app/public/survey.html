@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Friend Finder</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="row">
+
+            <div class="col" style="border-bottom-style: solid; border-width: 1px; padding: 10px; border-color: grey">
+
+                <h2>Survey Questions</h2>
+
+            </div>
+
+        </div>
+
+        <!-- About You -->
+        <div class="row">
+
+            <div class="col" style="border-bottom-style: solid; border-width: 1px; padding: 10px; border-color: grey">
+                <br>
+                <h3 style="font-weight: bold">About You</h3>
+
+
+                <form>
+                    <!-- NAME/PHOTO -->
+                    <h5>Name (Required)</h5>
+                    <input type="text" name="name" style="width: 100%"><br>
+                    <h5>Link to Photo Image (Required)</h5>
+                    <input type="text" name="photo" style="width: 100%"><br>  
+                    <br> 
+
+                    <!-- QUESTION 1 -->
+                    <div class="form-group">
+                        <label for="q1"><h4 style="font-weight: bold">Question 1:</h4></label>
+                        <h5>I have a kind word for everyone.</h5>
+                        <select class="form-control" id="q1">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 2 -->
+                    <div class="form-group">
+                        <label for="q2"><h4 style="font-weight: bold">Question 2:</h4></label>
+                        <h5>I am always prepared.</h5>
+                        <select class="form-control" id="q2">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 3 -->
+                    <div class="form-group">
+                        <label for="q3"><h4 style="font-weight: bold">Question 3:</h4></label>
+                        <h5>I feel comfortable around people.</h5>
+                        <select class="form-control" id="q3">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 4 -->
+                    <div class="form-group">
+                        <label for="q4"><h4 style="font-weight: bold">Question 4:</h4></label>
+                        <h5>I often feel blue.</h5>
+                        <select class="form-control" id="q4">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 5 -->
+                    <div class="form-group">
+                        <label for="q5"><h4 style="font-weight: bold">Question 5:</h4></label>
+                        <h5>I believe in the importance of art.</h5>
+                        <select class="form-control" id="q5">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 6 -->
+                    <div class="form-group">
+                        <label for="q6"><h4 style="font-weight: bold">Question 6:</h4></label>
+                        <h5>I feel I am better than other people.</h5>
+                        <select class="form-control" id="q6">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 7 -->
+                    <div class="form-group">
+                        <label for="q7"><h4 style="font-weight: bold">Question 7:</h4></label>
+                        <h5>I avoid taking on a lot of responsibility.</h5>
+                        <select class="form-control" id="q7">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 8 -->
+                    <div class="form-group">
+                        <label for="q8"><h4 style="font-weight: bold">Question 8:</h4></label>
+                        <h5>I make friends easily.</h5>
+                        <select class="form-control" id="q8">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 9 -->
+                    <div class="form-group">
+                        <label for="q9"><h4 style="font-weight: bold">Question 9:</h4></label>
+                        <h5>There are many things that I do not like about myself.</h5>
+                        <select class="form-control" id="q9">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <!-- QUESTION 10 -->
+                    <div class="form-group">
+                        <label for="q10"><h4 style="font-weight: bold">Question 10:</h4></label>
+                        <h5>I am interested in the meaning of things.</h5>
+                        <select class="form-control" id="q10">
+                            <option>1 (Strongly Disagree)</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <br>
+    
+                </form>
+
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+
+<!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
