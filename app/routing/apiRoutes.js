@@ -12,10 +12,10 @@ module.exports = function(app) {
 
         console.log(req.body);
 
-
+        compare(req.body);
         friends.push(req.body);
           
-        compare(req.body);
+        
         res.json(true);
     });
     
@@ -34,15 +34,12 @@ var compare = function(input) {
        }
        matchArray.push(difference);
        
-
-
-        console.log(friends[i].scores)
     }
-    console.log(matchArray);
-    var min = Math.min(matchArray)
-    function indexOfSmallest(matchArray) {
+    var findMatch = function(matchArray) {
         console.log(matchArray.indexOf(Math.min.apply(Math, matchArray)));
+        return matchArray.indexOf(Math.min.apply(Math, matchArray))
     }
-    indexOfSmallest(matchArray)
-    console.log(input)
+    console.log(findMatch(matchArray));
+    console.log(friends[findMatch(matchArray)])
+
 }
