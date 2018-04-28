@@ -10,11 +10,9 @@ module.exports = function(app) {
 
     app.post("/api/friends", function (req, res) {
 
-        console.log(req.body);
-
         compare(req.body);
+
         friends.push(req.body);
-          
         
         res.json(true);
     });
@@ -36,10 +34,9 @@ var compare = function(input) {
        
     }
     var findMatch = function(matchArray) {
-        console.log(matchArray.indexOf(Math.min.apply(Math, matchArray)));
         return matchArray.indexOf(Math.min.apply(Math, matchArray))
     }
-    console.log(findMatch(matchArray));
-    console.log(friends[findMatch(matchArray)])
+    var match = friends[findMatch(matchArray)]
+    console.log(match)
 
 }
