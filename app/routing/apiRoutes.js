@@ -12,15 +12,37 @@ module.exports = function(app) {
 
         console.log(req.body);
 
+
         friends.push(req.body);
           
-    
+        compare(req.body);
         res.json(true);
     });
     
 
 };
 
-var compare = function() {
+var compare = function(input) {
+    var matchArray = [];
 
+    for (i = 0; i < friends.length; i++) {
+        var difference =0;
+     
+       for(l = 0; l < friends[i].scores.length; l++) {
+           var diff = Math.abs(input.scores[l] - friends[i].scores[l]);
+           difference += diff;
+       }
+       matchArray.push(difference);
+       
+
+
+        console.log(friends[i].scores)
+    }
+    console.log(matchArray);
+    var min = Math.min(matchArray)
+    function indexOfSmallest(matchArray) {
+        console.log(matchArray.indexOf(Math.min.apply(Math, matchArray)));
+    }
+    indexOfSmallest(matchArray)
+    console.log(input)
 }
