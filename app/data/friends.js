@@ -1,0 +1,162 @@
+module.exports =[
+{
+    "name":"Ahmed",
+    "photo":"https://images.pexels.com/photos/462680/pexels-photo-462680.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+        ]
+},
+{
+    "name":"Christopher",
+    "photo":"https://images.pexels.com/photos/428339/pexels-photo-428339.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        1,
+        4,
+        2,
+        5,
+        3,
+        3,
+        1,
+        1,
+        2,
+        4
+        ]
+},
+{
+    "name":"Daniel",
+    "photo":"https://images.pexels.com/photos/213117/pexels-photo-213117.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        1,
+        2,
+        4,
+        5,
+        3,
+        2,
+        2,
+        3,
+        3,
+        1
+        ]
+},
+{
+    "name":"Timothy",
+    "photo":"https://images.pexels.com/photos/428341/pexels-photo-428341.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        3,
+        2,
+        5,
+        4,
+        1,
+        1,
+        2,
+        3,
+        5,
+        5
+        ]
+},
+{
+    "name":"Robert",
+    "photo":"https://images.pexels.com/photos/834863/pexels-photo-834863.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        4,
+        4,
+        4,
+        4,
+        2,
+        3,
+        1,
+        5,
+        1,
+        2
+        ]
+},
+{
+    "name":"Amanda",
+    "photo":"https://images.pexels.com/photos/407237/pexels-photo-407237.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        5,
+        5,
+        5,
+        3,
+        2,
+        1,
+        1,
+        4,
+        4,
+        2
+        ]
+},
+{
+    "name":"Rachel",
+    "photo":"https://images.pexels.com/photos/712521/pexels-photo-712521.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        2,
+        2,
+        2,
+        3,
+        5,
+        4,
+        1,
+        1,
+        5,
+        2
+        ]
+},
+{
+    "name":"Evelyn",
+    "photo":"https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        3,
+        3,
+        3,
+        2,
+        1,
+        4,
+        5,
+        5,
+        4,
+        1
+        ]
+},
+{
+    "name":"Rosa",
+    "photo":"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        1,
+        2,
+        3,
+        4,
+        5,
+        5,
+        4,
+        2,
+        1,
+        3
+        ]
+},
+{
+    "name":"Natalie",
+    "photo":"https://images.pexels.com/photos/324658/pexels-photo-324658.jpeg?auto=compress&cs=tinysrgb&h=350",
+    "scores":[
+        1,
+        4,
+        2,
+        3,
+        5,
+        1,
+        1,
+        4,
+        2,
+        3
+        ]
+}     
+]
