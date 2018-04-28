@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -180,6 +182,9 @@
                         </select>
                     </div>
                     <br>
+
+                    <!-- SUBMIT -->
+                    <button type="submit" class="btn btn-primary btn-lg submit" style="width: 100%">Submit</button>
     
                 </form>
 
@@ -192,13 +197,75 @@
     </div>
 
 
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends">API Friends Link</a></p>
+        </div>
+    </footer>
+
+
 <!-- BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-<!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+        // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+        // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+        // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+    
+        $(".submit").on("click", function(event) {
+            console.log("hello");
+            alert("Hello");
+          // Here we grab the form elements
+          var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [
+                $("#q1").val().trim(),
+                $("#q2").val().trim(),
+                $("#q3").val().trim(),
+                $("#q4").val().trim(),
+                $("#q5").val().trim(),
+                $("#q6").val().trim(),
+                $("#q7").val().trim(),
+                $("#q8").val().trim(),
+                $("#q9").val().trim(),
+                $("#q10").val().trim(),
+            ]
+          };
+    
+          console.log(newFriend);
+    
+          // This line is the magic. It"s very similar to the standard ajax function we used.
+          // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+          // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+          // depending on if a tables is available or not.
+    
+          $.post("/api/friends", newFriend, function() {
+    
+              // Clear the form when submitting
+              $("#name").val("");
+              $("#photo").val("");
+              $("#q1").val("");
+              $("#q2").val("");
+              $("#q3").val("");
+              $("#q4").val("");
+              $("#q5").val("");
+              $("#q6").val("");
+              $("#q7").val("");
+              $("#q8").val("");
+              $("#q9").val("");
+              $("#q10").val("");
+            });
+    
+        });
+    
+    </script>
 </body>
 
 </html>
+
